@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-function Todo({ todo, index }) {
+
+function Todo({ todo, index, completeTodo }) {
+
     return (
-        <div className="todo">
+        <div className="todo" style={{textDecoration: todo.isComplete ? 'line-through' : ''}}>
            {todo.task}
+           <div>
+               <button onClick={() => completeTodo(index)}>Complete</button>
+           </div>
         </div>
     )
 }

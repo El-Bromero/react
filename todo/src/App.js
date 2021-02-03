@@ -26,10 +26,16 @@ function App() {
     }
   ]);
 
-  const addTodo = text => {
-    const newTodos = [...todos, { text }];
+  const addTodo = task => {
+    const newTodos = [...todos, { task }];
     setTodos(newTodos);
-  }
+  };
+
+  const completeTodo = index => {
+    const newTodos = [...todos];
+    newTodos[index].isComplete = true;
+    setTodos(newTodos);
+  };
 
   return (
     <div className="App">
@@ -42,7 +48,7 @@ function App() {
           <Todo item="2"/>
           <Todo item="3"/> */}
 
-          { todos.map( (todo, index) => (<Todo key={index} todo={todo}/>))}
+          { todos.map( (todo, index) => (<Todo key={index} todo={todo} index={index} completeTodo={completeTodo} />))}
           
           <TodoForm addTodo={addTodo} />
 
