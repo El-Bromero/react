@@ -7,6 +7,9 @@ import Todo from './Components/Todo';
 
 import TodoForm from './Components/TodoForm';
 
+import {Container, Button} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 function App() {
 
   // const [todos, setTodos] = useState(["eat","sleep","code","pray","repeat"]);  //sample todo items.  these will need to be changed in your app.  Just filler todos, although they are quite important!
@@ -52,7 +55,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <div>
+        <Container>
          {/* <br/> */}
           <h2>Todo List App</h2>
           {/* <Todo item="1"/>
@@ -61,12 +64,15 @@ function App() {
 
           { todos.map( (todo, index) => (<Todo key={index} todo={todo} index={index} completeTodo={completeTodo} removeTodo={removeTodo} />))}
           
+          <br/>
+
           <TodoForm addTodo={addTodo} />
 
-          <button onClick={() => removeAllTodo()}>Clear Todo List</button>
-
+          <br/>
+          <Button onClick={() => removeAllTodo()}>Clear Todo List</Button>
+          
           {/* {todos.map( (t,i) => <Todo key={i} item={t}/>)} */}
-        </div>
+        </Container>
       </header>
     </div>
   );
