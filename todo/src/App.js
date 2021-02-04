@@ -21,7 +21,7 @@ function App() {
       isComplete: false
     },
     {
-      task: 'todo',
+      task: 'todo 🍔',
       isComplete: false
     }
   ]);
@@ -37,21 +37,33 @@ function App() {
     setTodos(newTodos);
   };
 
+  const removeTodo = index => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
+  const removeAllTodo = () => {
+    const newTodos = [];
+    setTodos(newTodos);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <div>
-         <br/>
-          <p>Create a Todo List App</p>
+         {/* <br/> */}
+          <h2>Todo List App</h2>
           {/* <Todo item="1"/>
           <Todo item="2"/>
           <Todo item="3"/> */}
 
-          { todos.map( (todo, index) => (<Todo key={index} todo={todo} index={index} completeTodo={completeTodo} />))}
+          { todos.map( (todo, index) => (<Todo key={index} todo={todo} index={index} completeTodo={completeTodo} removeTodo={removeTodo} />))}
           
           <TodoForm addTodo={addTodo} />
 
+          <button onClick={() => removeAllTodo()}>Clear Todo List</button>
 
           {/* {todos.map( (t,i) => <Todo key={i} item={t}/>)} */}
         </div>
