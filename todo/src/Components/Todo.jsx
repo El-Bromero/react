@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Button } from 'react-bootstrap';
+import { Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
@@ -10,8 +10,13 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
             {todo.task} 
             {todo.isComplete ? ' ✔' : ''}
            <div>
-               <Button variant="success" onClick={() => completeTodo(index)}>Complete</Button> {' '}
-               <Button variant="danger" onClick={() => removeTodo(index)}>x</Button>
+                <Button variant="success" onClick={() => completeTodo(index)}>
+                    Complete
+                </Button> 
+                
+                <Button variant="danger" onClick={() => removeTodo(index)}>
+                    x
+                </Button>
            </div> 
         </div>
        
