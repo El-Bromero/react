@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom';
+
 function NavBar() {
     return (
         <nav>
@@ -7,9 +9,13 @@ function NavBar() {
             <span>Add your &lt;Link/&gt;'s to the Pages Here in the NavBar</span>
             <p>You will need to use React Router's Navigation system as opposed to 'a' tags to achieve proper client side routing</p>
             <ul>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Sports</a></li>
+                {/* <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Sports</a></li>
                 <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Weather</a></li>
-                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Politics</a></li>
+                <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Politics</a></li> */}
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/Sports">Sports</Link></li>
+                <li><Link to="/Weather">Weather</Link></li>
+                <li><Link to="/Politics">Politics</Link></li>
             </ul>
         </nav>
     )

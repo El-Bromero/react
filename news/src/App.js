@@ -7,20 +7,35 @@ import Weather from './Views/Weather';
 import Politics from './Views/Politics';
 import Footer from './Components/Footer';
 
+import { Route } from 'react-router-dom';
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <NavBar/>
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <div>
          <br/>
-          <p>Create a News Site</p>
-          <p>Set up a Single Page Application (SPA) with react-router</p>
-          <Headlines/>
-          <Sports/>
-          <Weather/>
-          <Politics/>
+          {/* <p>Create a News Site</p>
+          <p>Set up a Single Page Application (SPA) with react-router</p> */}
+
+          <Route exact path ="/">
+            <Headlines/>
+          </Route>
+
+          <Route path ="/Sports">
+            <Sports/>
+          </Route>
+
+          <Route path ="/Weather">
+            <Weather/>
+          </Route>
+
+          <Route path ="/Politics">
+            <Politics/>
+          </Route>
+
         </div>
       </header>
       <Footer/>
