@@ -1,13 +1,24 @@
-import React from 'react';
-import Article from '../Components/Article';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import ArticleNews from '../Components/ArticleNews';
 
-function Politics() {
+function Politics({apiKey}) {
+
+    const [politicsNews, setPoliticsNews] = useState([]);
+
+    const POLITICS_URL = `https://newsapi.org/v2/everything?q=politics&apiKey=${apiKey}`;
+
+    useEffect(() => {
+        axios.get(POLITICS_URL)
+        .then(response => setPoliticsNews(response.data.articles))
+        .catch((error) => console.log(error));
+
+    },[]);
+
     return (
         <div>
             <h1>Political News goes here: </h1>
-            <Article/>
-            <Article/>
-            <Article/>
+            {politicsNews.map(news => <ArticleNews news={news}/>)}
         </div>
     )
 }

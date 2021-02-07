@@ -57,11 +57,11 @@ function App() {
           </Route>
 
           <Route path ="/Weather">
-            <Weather/>
+            <Weather apiKey={apiKey} />
           </Route>
 
           <Route path ="/Politics">
-            <Politics/>
+            <Politics apiKey={apiKey} />
           </Route>
 
         </div>

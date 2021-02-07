@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Article from '../Components/Article';
-
 import axios from 'axios';
 import ArticleNews from '../Components/ArticleNews';
 
