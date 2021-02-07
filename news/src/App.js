@@ -53,7 +53,7 @@ function App() {
           </Route>
 
           <Route path ="/Sports">
-            <Sports/>
+            <Sports apiKey={apiKey} />
           </Route>
 
           <Route path ="/Weather">

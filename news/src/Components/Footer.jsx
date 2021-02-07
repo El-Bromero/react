@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
         <footer>
-            <small>&copy;TEKcamp productions  All Rights Reserved</small>
+            <small>&copy;Romero News productions  All Rights Reserved</small>
         </footer>
     )
 }

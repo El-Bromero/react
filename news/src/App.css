@@ -4,6 +4,7 @@
 
 nav {
   border-bottom: 10px solid orange;
+  width: 100vw;
 }
 
 ul {
@@ -55,4 +56,12 @@ li {
   to {
     transform: rotate(360deg);
   }
+}
+
+a {
+  font-size: 1.5rem;
+}
+
+li:hover {
+  text-decoration: underline;
 }

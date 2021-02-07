@@ -1,22 +1,22 @@
 import React from 'react'
 
-function Article({ title, description, imageUrl, url}) {
+function ArticleNews({ news }) {
     return (
         <article>
             <header>
-                <h2>{title}</h2>
-                <img src={imageUrl} width="150" height="150" />
+                <h2>{news.title}</h2>
+                <img src={news.urlToImage} width="150" height="150" />
             </header>
             <main>
                 <section>
-                    <p>{description}</p>
+                    <p>{news.description}</p>
                 </section>
                 <section>
-                    <a href={url}>Link to article</a>
+                    <a href={news.url}>Link to article</a>
                 </section>
             </main>
         </article>
     )
 }
 
-export default Article;
+export default ArticleNews;
