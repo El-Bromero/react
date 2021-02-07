@@ -18,7 +18,7 @@ function Sports({apiKey}) {
 
     return (
         <div>
-            <h1>The Latest In Sports News: </h1>
+            <h2>The Latest In Sports News: </h2>
             {sportsNews.map(news => <ArticleNews news={news}/>)}
             {/* <Article/>
             <Article/>

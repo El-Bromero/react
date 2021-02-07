@@ -11,6 +11,8 @@ import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 function App() {
 
@@ -21,10 +23,6 @@ function App() {
   const NEWS_URL = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
 
   useEffect(() => {
-    // fetch(NEWS_URL)
-    //   .then(raw => raw.json())
-    //   .then(res => setNewsInfo(res.response.results));
-      // .then(res => console.log(res.response));
     axios.get(NEWS_URL)
       .then(response => setNewsInfo(response.data.articles))
       .catch((error) => console.log(error));
@@ -38,14 +36,6 @@ function App() {
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <div>
          <br/>
-          {/* <p>Create a News Site</p>
-          <p>Set up a Single Page Application (SPA) with react-router</p> */}
-
-          {/* {console.log(newsInfo)} */}
-          {/* {newsInfo.map(info => <p>{JSON.stringify(info)}</p>)} */}
-          
-          {/* Keys {source, author, title, description, url, urlToImage, publishedAt, content} */}
-          {/* {newsInfo.map(info => <p>{info.title}</p>)} */}
 
           <Route exact path ="/">
             {/* <Headlines/> */}
@@ -66,6 +56,13 @@ function App() {
 
         </div>
       </header>
+
+      <Button variant="danger" size="lg">
+        <a href="#" onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()">
+          Click here to go back up!
+        </a>
+      </Button>
+
       <Footer/>
     </div>
   );

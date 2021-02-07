@@ -17,7 +17,7 @@ function Politics({apiKey}) {
 
     return (
         <div>
-            <h1>Political News goes here: </h1>
+            <h2>The Latest In Political News: </h2>
             {politicsNews.map(news => <ArticleNews news={news}/>)}
         </div>
     )

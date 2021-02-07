@@ -17,7 +17,7 @@ function Weather({apiKey}) {
 
     return (
         <div>
-            <h1>Weather News goes here: </h1>
+            <h2>The Latest In Weather News: </h2>
             {weatherNews.map(news => <ArticleNews news={news}/>)}
         </div>
     )
