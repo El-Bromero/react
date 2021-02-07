@@ -13,9 +13,9 @@ function NavBar() {
                 <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Weather</a></li>
                 <li><a href="http://bit.ly/teksysacademy" target="_blank" rel="noreferrer">Politics</a></li> */}
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/Sports">Sports</Link></li>
-                <li><Link to="/Weather">Weather</Link></li>
-                <li><Link to="/Politics">Politics</Link></li>
+                <li><Link to="/sports">Sports</Link></li>
+                <li><Link to="/weather">Weather</Link></li>
+                <li><Link to="/politics">Politics</Link></li>
             </ul>
         </nav>
     )
